@@ -49,6 +49,9 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 		export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
 		export OF_USE_MAGISKBOOT=1
 		export OF_USE_MAGISKBOOT_FOR_ALL_PATCHES=1
+		export OF_FL_PATH1="/system/flashlight"
+		export OF_FL_PATH2=""
+		export OF_FLASHLIGHT_ENABLE=1
 		export OF_USE_TWRP_SAR_DETECT=1
 		export OF_DISABLE_KEYMASTER2=1
 		export OF_LEGACY_SHAR512=1
