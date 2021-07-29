@@ -38,9 +38,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 		export ALLOW_MISSING_DEPENDENCIES=true
 		export LC_ALL="C"
 		export OF_USE_GREEN_LED=0 # Not for us
-		export FOX_REMOVE_BASH=1 # Size problem
 		export FOX_REMOVE_AAPT=1 # doesn't work
-		export FOX_REMOVE_ZIP_BINARY=1 # Reduce recovery size amap
 		export OF_VANILLA_BUILD=1
 		export OF_DONT_PATCH_ON_FRESH_INSTALLATION=1
 		export OF_SKIP_ORANGEFOX_PROCESS=1
