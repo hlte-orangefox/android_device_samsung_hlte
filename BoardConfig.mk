@@ -1,4 +1,4 @@
-DEVICE_TREE := device/samsung/hlte
+LOCAL_DIR := device/samsung/hlte
 
 CM_PLATFORM_SDK_VERSION := 7	# Required for libf2fs.so
 override TARGET_OUT_VENDOR_SHARED_LIBRARIES = $(TARGET_OUT_SHARED_LIBRARIES)
@@ -24,9 +24,12 @@ TARGET_CPU_SMP := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
 
 # Kernel
-TARGET_PREBUILT_KERNEL := $(DEVICE_TREE)/zImage
-TARGET_PREBUILT_DTB := $(DEVICE_TREE)/dtb.img
-BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_TREE)/mkbootimg.mk
+BOARD_KERNEL_IMAGE_NAME := zImage
+TARGET_KERNEL_SOURCE := kernel/samsung/msm8974
+TARGET_KERNEL_CONFIG := recovery_hlte_defconfig
+BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_DIR)/mkbootimg.mk
+KERNEL_TOOLCHAIN := /opt/toolchains/arm-eabi-4.8/bin
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-eabi-
 BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom androidboot.bootdevice=msm_sdcc.1 user_debug=31 msm_rtb.filter=0x3F
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
@@ -44,6 +47,9 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 BOARD_SUPPRESS_SECURE_ERASE := true
+
+# LZMA
+LZMA_RAMDISK_TARGETS := recovery
 
 # Extended Filesystem Support
 TARGET_KERNEL_HAVE_EXFAT := true
@@ -63,6 +69,13 @@ TW_NO_EXFAT := true
 TW_NO_REBOOT_BOOTLOADER := true
 TW_THEME := portrait_hdpi
 TW_EXCLUDE_SUPERSU := true
+
+# SHRP
+SHRP_DEVICE_CODE := jflte
+SHRP_MAINTAINER := notnoelchannel
+SHRP_LITE := true
+SHRP_EXPRESS := true
+SHRP_DARK := true
 
 # Encryption support
 TW_INCLUDE_CRYPTO := true
