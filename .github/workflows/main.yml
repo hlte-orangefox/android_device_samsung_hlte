@@ -31,7 +31,7 @@ jobs:
           python3 ~/.bin/repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
           git clone --depth=1 --branch android-7.1.2_r38 --single-branch https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8 /opt/toolchains/arm-eabi-4.8
           git clone --depth=1 --branch android-7.1 --single-branch https://github.com/hlte-orangefox/android_device_samsung_hlte.git device/samsung/hlte
-          git clone --depth=1 --branch cm-14.1 --single-branch https://github.com/hlte-orangefox/android_kernel_samsung_msm8974.git kernel/samsung/msm8974
+          git clone --depth=1 --branch lineage-15.0 --single-branch https://github.com/hlte-orangefox/android_kernel_samsung_msm8974.git kernel/samsung/msm8974
       - name: Building OFRP
         run: |
           OLDPATH=$PATH
