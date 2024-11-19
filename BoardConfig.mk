@@ -26,7 +26,7 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 # Kernel
 BOARD_KERNEL_IMAGE_NAME := zImage
 TARGET_KERNEL_SOURCE := kernel/samsung/msm8974
-TARGET_KERNEL_CONFIG := recovery_hlte_defconfig
+TARGET_KERNEL_CONFIG := lineage_hlte_bcm2079x_defconfig
 BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_DIR)/mkbootimg.mk
 KERNEL_TOOLCHAIN := /opt/toolchains/arm-eabi-4.8/bin
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-eabi-
