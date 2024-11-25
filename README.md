@@ -1,11 +1,7 @@
-## OrangeFox device tree for Galaxy S5 (International Qualcomm, Americas, and Oceanic)
+## OrangeFox device tree for Galaxy Note 3
 
-Credits to @jcadduono for the tree used as a base. 
+Credits to @jcadduono and OrangeFox for the tree used as a base. 
 
 Credits to @IcemanDEV for his fix for aroma installer.
 
-Credits to @me aka @Yilliee for various other edits 😋
-
-
-Kernel sources are available at: https://github.com/jcadduono/nethunter_kernel_klte/tree/twrp-6.0
-
+Credits to @me aka notnoelchannel and @Yilliee for various other edits 😋
