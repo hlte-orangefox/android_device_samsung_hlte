@@ -25,7 +25,7 @@ jobs:
           cd ~/OFRP
           mkdir ~/.bin
           curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/.bin/repo
-          python3 ~/.bin/repo init --depth=1 -u https://github.com/unlegacy-devices/fox-6.0_manifest.git -b fox_6.0
+          python3 ~/.bin/repo init --depth=1 -u https://github.com/unlegacy-devices/fox-7.1_manifest -b fox-7.1
           python3 ~/.bin/repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
           git clone --depth=1 --branch fox_6.0 --single-branch https://github.com/hlte-orangefox/android_device_samsung_hlte.git device/samsung/hlte
       - name: Building OFRP
